@@ -6,9 +6,6 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
-
 import { Electron } from '../providers/electron'
 
 
@@ -29,8 +26,6 @@ import { Electron } from '../providers/electron'
     ListPage
   ],
   providers: [
-    StatusBar,
-    SplashScreen,
     Electron,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
