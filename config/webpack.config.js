@@ -125,7 +125,7 @@ var prodConfig = {
   },
   externals: [
     (function () {
-        var IGNORES = ["fs","child_process","electron","path","assert","cluster","crypto","dns","domain","events","http","https","net","os","process","punycode","querystring","readline","repl","stream","string_decoder","tls","tty","dgram","url","util","v8","vm","zlib"];
+        var IGNORES = ["node-powershell","fs","child_process","electron","path","assert","cluster","crypto","dns","domain","events","http","https","net","os","process","punycode","querystring","readline","repl","stream","string_decoder","tls","tty","dgram","url","util","v8","vm","zlib"];
         return function (context, request, callback) {
             if (IGNORES.indexOf(request) >= 0) {
                 return callback(null, "require('" + request + "')");

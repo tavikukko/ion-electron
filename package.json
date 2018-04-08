@@ -17,7 +17,8 @@
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
+    "ionic:serve": "ionic-app-scripts serve",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds"
   },
   "dependencies": {
     "@angular/common": "5.2.9",
@@ -43,17 +44,19 @@
     "@ionic/app-scripts": "3.1.8",
     "electron": "1.8.4",
     "electron-builder": "20.8.1",
+    "electron-packager": "^12.0.0",
     "foreman": "^2.0.0",
     "typescript": "2.8.1"
   },
   "main": "electron/electron.js",
   "config": {
     "ionic_bundler": "webpack",
-    "ionic_webpack": "./config/webpack.config.js"
+    "ionic_webpack": "./config/webpack.config.js",
+    "ionic_copy": "./config/custom.copy.js"
   },
   "build": {
     "appId": "com.lohanitech.ionic-electron-test",
-    "electronVersion": "1.6.2",
+    "electronVersion": "1.8.4",
     "asar": false,
     "files": [
       "www/**/*",

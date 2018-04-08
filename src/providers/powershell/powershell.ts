@@ -21,22 +21,20 @@ export class Powershell {
   constructor(public http: HttpClient) {
   }
 
-  executeps() {
+  invokePowerShellScript(script, params) {
+    window.URL = window.URL;
+
     return new Promise((resolve, reject) => {
-      this.http.get('/assets/ps-scripts/Connect-PnPOnline.ps1', { responseType: 'text' })
-        .subscribe((script) => {
-          let commands = [{ siteUrl: "https://tavikukko365.sharepoint.com" }];
-          let command = script.replace("$siteUrl", "https://tavikukko365.sharepoint.com");
-          this.ps.addCommand(command, []);
-          this.ps.invoke()
-            .then(output => {
-              resolve(output);
-            })
-            .catch(err => {
-              this.ps.dispose();
-              reject(err);
-            });
+      this.ps.addCommand(`./www/assets/ps-scripts/${script}`, params);
+      this.ps.invoke()
+        .then(output => {
+          resolve(output);
+        })
+        .catch(err => {
+          this.ps.dispose();
+          reject(err);
         });
+
     });
   }
 

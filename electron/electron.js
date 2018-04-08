@@ -17,8 +17,8 @@ function createWindow() {
         height: 600
     });
 
-    var url = process.env.E_URL || url.format({
-            pathname: path.join(__dirname, '/../www/index.html'),
+    var url = process.env.E_URL || require('url').format({
+            pathname: require('path').join(__dirname, '/../www/index.html'),
             protocol: 'file:',
             slashes: true
         });
