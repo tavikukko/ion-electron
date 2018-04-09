@@ -17,8 +17,7 @@
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve",
-    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds"
+    "ionic:serve": "ionic-app-scripts serve"
   },
   "dependencies": {
     "@angular/common": "5.2.9",
