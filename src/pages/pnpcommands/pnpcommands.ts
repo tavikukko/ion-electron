@@ -13,7 +13,7 @@ export class PnPCommands {
   constructor(public navCtrl: NavController, public menuCtrl: MenuController,
     public electron: Electron, public powershell: Powershell,
     public Toast: ToastController, public loadingCtrl: LoadingController) {
-    this.menuCtrl.enable(false, 'appMenu');
+    //this.menuCtrl.enable(false, 'appMenu');
     /*
         let loading = this.loadingCtrl.create({
           spinner: 'dots',
