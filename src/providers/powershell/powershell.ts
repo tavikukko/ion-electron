@@ -15,7 +15,7 @@ export class Powershell {
   ps = new powershell({
     executionPolicy: 'Bypass',
     noProfile: true,
-    // usePwsh: true
+     usePwsh: process.platform === "win32" ? false : true
   });
 
   constructor(public http: HttpClient) {
