@@ -6,10 +6,10 @@ import { Electron } from './../../providers/electron/electron';
 import { Powershell } from './../../providers/powershell/powershell';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-pnpcommands',
+  templateUrl: 'pnpcommands.html'
 })
-export class HomePage {
+export class PnPCommands {
   constructor(public navCtrl: NavController, public menuCtrl: MenuController,
     public electron: Electron, public powershell: Powershell,
     public Toast: ToastController, public loadingCtrl: LoadingController) {
