@@ -15,7 +15,7 @@ export class Powershell {
   ps = new powershell({
     executionPolicy: 'Bypass',
     noProfile: true,
-    usePwsh: true
+    // usePwsh: true
   });
 
   constructor(public http: HttpClient) {
